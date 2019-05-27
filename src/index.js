@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import a from './package_src';
+import a from './package';
 
 function App() {
   return (
