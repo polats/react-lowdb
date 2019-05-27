@@ -2,7 +2,6 @@
 
 Save React state on LocalStorage using lowdb
 
-[![NPM Version](https://img.shields.io/npm/v/react-lowdb/npm.svg)](https://www.npmjs.com/package/react-lowdb)
 [![Build Status](https://travis-ci.org/polats/react-lowdb.svg?branch=master)](https://travis-ci.org/polats/react-lowdb)
 [![dependencies Status](https://david-dm.org/polats/react-lowdb/status.svg)](https://david-dm.org/polats/react-lowdb)
 [![devDependencies Status](https://david-dm.org/polats/react-lowdb/dev-status.svg)](https://david-dm.org/polats/react-lowdb?type=dev)
