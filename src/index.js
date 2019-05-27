@@ -1,10 +1,14 @@
-const defaultAwesomeFunction = (name) => {
-  const returnStr = `I am the Default Awesome Function, fellow comrade! - ${name}`;
-  return returnStr;
-};
+import React from "react";
+import ReactDOM from "react-dom";
 
-const awesomeFunction = () => 'I am just an Awesome Function';
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
 
-export default defaultAwesomeFunction;
-
-export { awesomeFunction };
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);

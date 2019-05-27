@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import defaultAwesomeFunction, { awesomeFunction } from '../src';
+import defaultAwesomeFunction, { awesomeFunction } from '../package_src';
 
 describe('Awesome test.', () => {
   it('should test default awesome function', () => {
