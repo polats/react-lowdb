@@ -19,6 +19,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "lowdb": "^1.0.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "2.1.8"
@@ -48,6 +49,7 @@
   "homepage": "https://github.com/polats/react-lowdb#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "9.0.0",
     "babel-plugin-add-module-exports": "^1.0.0",
     "babel-polyfill": "^6.26.0",
