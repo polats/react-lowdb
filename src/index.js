@@ -1,15 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import a from './package';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      <h2>{a("TEST")}</h2>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App />, document.getElementById('root'));

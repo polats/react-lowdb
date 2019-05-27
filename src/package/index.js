@@ -1,10 +1,20 @@
-const defaultAwesomeFunction = (name) => {
-  const returnStr = `I am the Default Awesome Function, fellow comrade! - ${name}`;
-  return returnStr;
-};
+import React, { Component } from 'react';
+import low from 'lowdb';
+import LocalStorage from 'lowdb/adapters/LocalStorage';
 
-const awesomeFunction = () => 'I am just an Awesome Function';
+const adapter = new LocalStorage('db');
+const db = low(adapter);
 
-export default defaultAwesomeFunction;
+function withReactLowdb(WrappedComponent) {
+  return class extends Component {
+    render() {
+      return (
+        <WrappedComponent db={db} {...this.props} />
+      );
+    }
+  };
+}
 
-export { awesomeFunction };
+
+
+export default withReactLowdb;

@@ -1,13 +1,13 @@
 {
   "env": {
     "development": {
-      "presets": ["env"],
+      "presets": ["env", "react"],
       "plugins": [
         "add-module-exports"
       ]
     },
     "production": {
-      "presets": ["env", "minify"],
+      "presets": ["env", "react", "minify"],
       "plugins": [
         "add-module-exports"
       ]

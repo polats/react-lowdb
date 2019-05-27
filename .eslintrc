@@ -1,10 +1,15 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "env": {
     "mocha": true
   },
   "rules": {
-    "comma-dangle": ["error", "only-multiline"]
+    "comma-dangle": ["error", "only-multiline"],
+    "no-undef": 0,
+    "no-param-reassign": 0,
+    "no-console": 0,
+    "react/prop-types": 0,
+    "react/display-name": 0
   }
 }
