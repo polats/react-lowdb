@@ -18,7 +18,7 @@ class App extends ComponentWithReactLowdb {
     return (
       <div className="App">
         <h1>react-lowdb demo</h1>
-        <p>This component&apos;s state is edittable on the&nbsp;
+        <p>This component&apos;s state is editable on the&nbsp;
         <a href="https://www.npmjs.com/package/react-json-view">React JSON View</a>
         &nbsp;below.
         </p>
@@ -31,7 +31,7 @@ class App extends ComponentWithReactLowdb {
           }>Reset Database</button>
         <p/>
 
-        <ReactJson theme="monokai" src={this.state}
+        <ReactJson theme="monokai" src={this.state ? this.state : {}}
           onAdd={this.handleChange}
           onDelete={this.handleChange}
           onEdit={this.handleChange}

@@ -11,15 +11,12 @@ Save React state on LocalStorage using lowdb
 
 Check it out on [CodeSandbox](https://codesandbox.io/s/github/polats/react-lowdb)
 
-# Features
-
-
-# Commands
-
-
 # Installation
 
+```
+npm install react-lowdb
 
+```
 
 # License
 
