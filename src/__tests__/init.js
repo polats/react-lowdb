@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Adapter from 'enzyme-adapter-react-16'
 import App from '../App';
 
-Enzyme.configure( {adapter: new Adapter() } );
+// Enzyme.configure( {adapter: new Adapter() } );
 
 describe('React tests.', () => {
   it('renders without crashing', () => {
