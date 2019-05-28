@@ -7,21 +7,13 @@ const db = low(adapter);
 
 class ComponentWithReactLowdb extends Component {
 
-    // defaultDBFields = {
-    //   username: "ziggystardust",
-    //   email: "majortom@groundcontrol.com",
-    //   planetEarthisBlue: true,
-    //   countdown: 10,
-    //   tinCan: 3.14
-    // }
-
-    defaultDBFields = { }
-
     constructor(props) {
       super(props);
 
+      var defaultDBFields = { }
+
       // initialize lowdb with default object if none found
-      db.defaults(this.defaultDBFields).write();
+      db.defaults(defaultDBFields).write();
 
     }
 
