@@ -1,6 +1,6 @@
 {
   "name": "react-lowdb",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Save React state on LocalStorage using lowdb",
   "main": "./lib/index.js",
   "scripts": {
