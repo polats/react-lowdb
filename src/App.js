@@ -1,30 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactJson from 'react-json-view';
 // import withReactLowdb from 'react-lowdb'; // replace './package' with 'react-lowdb'
-import withReactLowdb from './package';
+import ComponentWithReactLowdb from './package';
 
-class App extends Component {
-
-  defaultDBFields = {
-    selectedButton: null
-  }
-
+class App extends ComponentWithReactLowdb {
   constructor(props) {
     super(props);
 
-    // initialize lowdb with default object if none found
-    props.db.defaults(this.defaultDBFields).write();
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
-    this.loadStateFromDB();
-  }
-
-  loadStateFromDB() {
-    var dbJson = this.props.db.getState();
-    this.setState({
-      ...dbJson
-    })
+  handleChange(obj) {
+    this.saveDatabase(obj.updated_src);
   }
 
   render() {
@@ -37,10 +24,22 @@ class App extends Component {
         </p>
         <p>Changes are saved to LocalStorage as the state changes. You can try
         refreshing the page to see the data being saved.</p>
-        <ReactJson theme="monokai" src={this.state}/>
+
+        <button onClick={() =>
+            window.confirm("Are you sure you wish the delete the database?") &&
+            this.resetDatabase()
+          }>Reset Database</button>
+        <p/>
+
+        <ReactJson theme="monokai" src={this.state}
+          onAdd={this.handleChange}
+          onDelete={this.handleChange}
+          onEdit={this.handleChange}
+          enableClipboard={false}
+        />
       </div>
     );
   }
 }
 
-export default withReactLowdb(App);
+export default App;
