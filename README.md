@@ -18,6 +18,26 @@ npm install react-lowdb
 
 ```
 
+# Usage
+```
+import ComponentWithReactLowdb from 'react-lowdb'
+
+class Demo extends ComponentWithReactLowdb {
+
+  // All state changes from Demo will now be saved
+  // via ComponentWithReactLowdb's componentDidUpdate.
+  //
+  // They are loaded back via ComponentWithReactLowdb's
+  // componentDidMount.
+
+}
+```
+
+# Props
+
+* **defaultDBFields** (Optional) - default values of the DB
+* **dbName** (Optional) - specify the name of the node to save in LocalStorage. Defaults to __[constructor.name]-react-lowdb__
+
 # License
 
 MIT © Paul Gadi
