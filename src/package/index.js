@@ -39,15 +39,11 @@ class ComponentWithReactLowdb extends Component {
       return true;
     }
 
-    async loadStateFromDB() {
+    async componentDidMount() {
       var dbJson = db.getState();
       await this.setState({
         ...dbJson[this.dbName]
       })
-    }
-
-    componentDidMount() {
-      this.loadStateFromDB();
     }
 
     render() {

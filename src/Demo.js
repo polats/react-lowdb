@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
-// import withReactLowdb from 'react-lowdb'; // replace './package' with 'react-lowdb'
+// import ComponentWithReactLowdb from 'react-lowdb'; // replace './package' with 'react-lowdb'
 import ComponentWithReactLowdb from './package';
 
 class Demo extends ComponentWithReactLowdb {
