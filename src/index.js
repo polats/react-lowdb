@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Demo from './Demo';
 
 var defaultDBFields = {
   sessionID: "SomeFakeSessionID123456",
   layoutMode: 1
 };
 
-var dbName = "componentState";
-
 ReactDOM.render(
-  <App
-    dbName={dbName}
+  <Demo
     defaultDBFields={defaultDBFields}
   />, document.getElementById('root'));

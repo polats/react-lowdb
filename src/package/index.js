@@ -9,14 +9,14 @@ class ComponentWithReactLowdb extends Component {
 
     // variables available to deriving class
     db = db;
-    dbName = "";
+    dbName = null;
 
     constructor(props) {
       super(props);
 
-      // initialize lowdb with default object if none found
+      // initialize lowdb with default props
       var defaultDBFields = props.defaultDBFields ? props.defaultDBFields : [];
-      var dbName = props.dbName ? props.dbName : "react-lowdb";
+      var dbName = props.dbName ? props.dbName : this.constructor.name + "-react-lowdb";
 
       this.dbName = dbName;
 
@@ -24,6 +24,14 @@ class ComponentWithReactLowdb extends Component {
       json[dbName] = defaultDBFields;
 
       db.defaults(json).write();
+    }
+
+    componentDidUpdate() {
+      this.saveStateToDB();
+    }
+
+    saveStateToDB() {
+      db.set(this.dbName, this.state).write();
     }
 
     resetStateToDefault() {
@@ -34,7 +42,7 @@ class ComponentWithReactLowdb extends Component {
     async loadStateFromDB() {
       var dbJson = db.getState();
       await this.setState({
-        ...dbJson
+        ...dbJson[this.dbName]
       })
     }
 
